@@ -1484,6 +1484,31 @@ docs = ["sphinx-rtd-theme (>=1.0.0)", "Sphinx (>=4.0.0)"]
 dev = ["pytest-timeout", "pytest-mock", "pytest-cov", "pytest (>=6.0)", "psutil", "paramiko"]
 
 [[package]]
+name = "polars"
+version = "0.14.23"
+description = "Blazingly fast DataFrame library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = {version = ">=1.16.0", optional = true, markers = "extra == \"numpy\""}
+pandas = {version = "*", optional = true, markers = "extra == \"pandas\""}
+pyarrow = {version = ">=4.0.0", optional = true, markers = "extra == \"pyarrow\""}
+typing_extensions = {version = ">=4.0.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+pyarrow = ["pyarrow (>=4.0.0)"]
+pandas = ["pyarrow (>=4.0.0)", "pandas"]
+fsspec = ["fsspec"]
+all = ["polars"]
+connectorx = ["connectorx"]
+matplotlib = ["matplotlib"]
+xlsx2csv = ["xlsx2csv (>=0.8.0)"]
+numpy = ["numpy (>=1.16.0)"]
+timezone = ["backports.zoneinfo", "tzdata"]
+
+[[package]]
 name = "prometheus-client"
 version = "0.15.0"
 description = "Python client for the Prometheus monitoring system."
@@ -2196,7 +2221,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1d566a65a93f463cc467f22c162f6c04461af2cb7847eac6c89cf4223b8eda4e"
+content-hash = "9b85bda8e2c2029a9b95d91f37a4c0c7214ba983030461408f3049b2ee8af392"
 
 [metadata.files]
 aiohttp = [
@@ -3354,6 +3379,14 @@ pillow = [
 plumbum = [
     {file = "plumbum-1.8.0-py3-none-any.whl", hash = "sha256:0f6b59c8a03bfcdddd1efc04a126062663348e892ce7ddef49ec60e47b9e2c09"},
     {file = "plumbum-1.8.0.tar.gz", hash = "sha256:f1da1f167a2afe731a85de3f56810f424926c0a1a8fd1999ceb2ef20b618246d"},
+]
+polars = [
+    {file = "polars-0.14.23-cp37-abi3-macosx_10_7_x86_64.whl", hash = "sha256:09315c811ccd13e67a1d9d7013b555f9187f20ad0ef11f0f20d38cd562a22126"},
+    {file = "polars-0.14.23-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:6add16b77dfe0a9c001e4909fe12f031a1d069b4371694ed9402b02912e56e9b"},
+    {file = "polars-0.14.23-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bd18f27ffb9710e34b4516e79523976dd058d46365e42ec1242ad71d32f4e0cb"},
+    {file = "polars-0.14.23-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e4ea99293476bd9631242a377c71fa969e28232a9ca51f58b8923ffe2b151607"},
+    {file = "polars-0.14.23-cp37-abi3-win_amd64.whl", hash = "sha256:b5653f9dcd7e48bd61a1f1e2c46ad99023bd65adcbb779e55fb655f264c209da"},
+    {file = "polars-0.14.23.tar.gz", hash = "sha256:b7b863af8eb6463f934025d6d8d7fc6d8c1fa1d6d1e346b6bfafc8897a980b5d"},
 ]
 prometheus-client = [
     {file = "prometheus_client-0.15.0-py3-none-any.whl", hash = "sha256:db7c05cbd13a0f79975592d112320f2605a325969b270a94b71dcabc47b931d2"},

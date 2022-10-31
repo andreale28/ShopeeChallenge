@@ -13,6 +13,7 @@ matplotlib = "^3.6.1"
 hvplot = "^0.8.1"
 modin = {extras = ["all"], version = "^0.16.1"}
 protobuf = "3.20.*"
+polars = {extras = ["numpy", "pandas", "pyarrow"], version = "^0.14.23"}
 
 [tool.poetry.dev-dependencies]
 
