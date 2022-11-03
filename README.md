@@ -21,8 +21,11 @@ This is my personal approach for Shopee Challenge. In this project, I try to uti
 in pandas and encapsulate code as function _(rather than split them in several code cell)_. This is a useful
 practice which helps us the avoid duplicate the code.
 
+Here is the link to download the [data](https://drive.google.com/drive/folders/1jeTFp7yTgUIZDszomrXYK7SntWquFCtA?usp=share_link)
+
 ## Requirements:
 - Basic library for scientific computing: `pandas`, `numpy`
-- Since the data file is quite large **(~750 MB)**, I also have the support from `modin[ray]`
+- Since the [data](https://drive.google.com/drive/folders/1jeTFp7yTgUIZDszomrXYK7SntWquFCtA?usp=share_link) file is quite large **(~750 MB)**, I also have the support from `modin[ray]`
 which is a drop-in placement `import modin.pandas as pd` for speeding the reading and manipulating
 the data.
+
