@@ -18,14 +18,18 @@ For more detail about the challenge, please visit
 
 ## Note
 This is my personal approach for Shopee Challenge. In this project, I try to utilize the chaining method
-in pandas and encapsulate code as function _(rather than split them in several code cell)_. This is a useful
-practice which helps us the avoid duplicate the code.
+in 'modin[pandas]' and refactor code as function _(rather than split them in several code cell)_. This is a useful
+practice which helps us the avoid duplicate the code. Another approach is to use `polars` which is a dataframe library written entirely in Rust using the Appache Arrow file format. 
+
+Both approaches have their advantages. With `modin[pandas]` as a drop-in replacement, you can start to analyze your data without learning new API and the running time is also quite fast. On the other hands, you need to learn new API with `polars` (this is not so hard if you are familar with SQL) and the running time of `polars` is much more faster than `modin[pandas]`, like crazy fast, about 40-50 times. 
+
+On the installation experience, `modin[pandas]` takes time to install because of its huge dependencies while `polars` just takes 5 seconds since it is written entirely on Rust.
 
 Here is the link to download the [data](https://drive.google.com/drive/folders/1jeTFp7yTgUIZDszomrXYK7SntWquFCtA?usp=share_link)
 
 ## Requirements:
-- Basic library for scientific computing: `pandas`, `numpy`
-- Since the [data](https://drive.google.com/drive/folders/1jeTFp7yTgUIZDszomrXYK7SntWquFCtA?usp=share_link) file is quite large **(~750 MB)**, I also have the support from `modin[ray]`
-which is a drop-in placement `import modin.pandas as pd` for speeding the reading and manipulating
-the data.
+- Basic library for scientific computing: `pandas`, `numpy`,`modin[ray]`, `polars`
 
+## Notebook Organization
+- `analysis.ipynb`: this notebook uses `modin[ray]` to complete the tasks.
+- `analysis_polars.ipynb`: this notebook uses `polars` to complete the tasks.
