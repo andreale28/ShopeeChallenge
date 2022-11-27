@@ -1492,16 +1492,13 @@ ssh = ["paramiko"]
 
 [[package]]
 name = "polars"
-version = "0.14.30"
+version = "0.15.1"
 description = "Blazingly fast DataFrame library"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-numpy = {version = ">=1.16.0", optional = true, markers = "extra == \"numpy\""}
-pandas = {version = "*", optional = true, markers = "extra == \"pandas\""}
-pyarrow = {version = ">=4.0.0", optional = true, markers = "extra == \"pyarrow\""}
 typing_extensions = {version = ">=4.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
@@ -2281,7 +2278,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1db6ced33e808ea4c966c5cb23540aaa960a795612a90ba20ced14588856d05f"
+content-hash = "fe6ca6f3704b2cb69af61301cca21fa5669438eeeaa9265c5f6c9a5a2bb992f1"
 
 [metadata.files]
 aiohttp = [
@@ -3417,9 +3414,12 @@ plumbum = [
     {file = "plumbum-1.8.0.tar.gz", hash = "sha256:f1da1f167a2afe731a85de3f56810f424926c0a1a8fd1999ceb2ef20b618246d"},
 ]
 polars = [
-    {file = "polars-0.14.30-cp37-abi3-macosx_10_7_x86_64.whl", hash = "sha256:8d79c2327e6ba82d9604f008f704303e4dbe859f35d73622ad7da3b14ffc186e"},
-    {file = "polars-0.14.30-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:bf61af83a99e415aa503ada3ec741a9057af27a097286e59c70e1af52c329336"},
-    {file = "polars-0.14.30-cp37-abi3-win_amd64.whl", hash = "sha256:fcdf6c15d8bd09e60889543e771350216f4a6b786c0677d029bbab64ece63218"},
+    {file = "polars-0.15.1-cp37-abi3-macosx_10_7_x86_64.whl", hash = "sha256:a8f94c76306f9742c7742d81fd5bbe2d8481827614714d121877b396bf17e5ae"},
+    {file = "polars-0.15.1-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:2042ae1e80d6b5a4a60dbeffc68bd3063b588a28c2898561f2c0e93a81c666c4"},
+    {file = "polars-0.15.1-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5bf736ca0e4d971154648f2a23ac840f128a74c5fc1e7dcd72b456c55bcf0d34"},
+    {file = "polars-0.15.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b89afb8e811f469a521bc1a61479953a1ef468ee6237572e2cc2a4a038407666"},
+    {file = "polars-0.15.1-cp37-abi3-win_amd64.whl", hash = "sha256:deeac0a8184d1bd6791c476c905364c1e4f9e924203b1f33e6a5a0f46877706e"},
+    {file = "polars-0.15.1.tar.gz", hash = "sha256:a00ef0f53752ca4a7e33d92fb71ee2ce4e1d336b54e937fadc94dfb9c66fd606"},
 ]
 prometheus-client = [
     {file = "prometheus_client-0.13.1-py3-none-any.whl", hash = "sha256:357a447fd2359b0a1d2e9b311a0c5778c330cfbe186d880ad5a6b39884652316"},
