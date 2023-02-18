@@ -5,16 +5,18 @@ description = ""
 authors = ["andreale28 <lhson43680@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "3.10.10"
 numpy = "^1.23.4"
 pandas = "^1.5.0"
-sklearn = "^0.0"
 matplotlib = "^3.6.1"
 hvplot = "^0.8.1"
 protobuf = "3.20.*"
-polars = "0.15.1"
 ray = "2.0.1"
 modin = {extras = ["all"], version = "^0.17.1"}
+scikit-learn = "^1.2.1"
+polars = "^0.16.6"
+duckdb = "0.7.0"
+ibis-framework = {extras = ["polars"], version = "^4.1.0"}
 
 [tool.poetry.dev-dependencies]
 
